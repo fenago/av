@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth !important;
+  font-family: 'Inter', sans-serif;
+}
+
+/* It makes the HTML progress bar filling smooth when value change. */
+progress::-webkit-progress-value {
+  transition: 0.6s width ease-out;
+}
+
+@layer base {
+  /* LearningScience.ai Brand Typography System */
+  h1 {
+    @apply text-h1 text-text-primary font-bold;
+  }
+  
+  h2 {
+    @apply text-h2 text-text-primary font-bold;
+  }
+  
+  h3 {
+    @apply text-h3 text-text-primary font-semibold;
+  }
+  
+  h4 {
+    @apply text-h4 text-text-primary font-semibold;
+  }
+  
+  p {
+    @apply text-body-lg text-text-primary font-regular;
+  }
+  
+  /* Secondary text for smaller content */
+  .text-secondary {
+    @apply text-body-md text-text-secondary font-regular;
+  }
+  
+  /* Brand gradient buttons */
+  .btn-gradient {
+    @apply !bg-brand-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+  }
+  
+  .btn {
+    @apply !capitalize;
+  }
+}
+
+@layer components {
+  /* Brand-specific utility classes */
+  .text-brand-blue {
+    color: #3B82F6;
+  }
+  
+  .text-brand-purple {
+    color: #8B5CF6;
+  }
+  
+  .text-brand-green {
+    color: #10B981;
+  }
+  
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #3B82F6 100%);
+  }
+  
+  .bg-cta-gradient {
+    background: linear-gradient(to bottom right, #3B82F6, #8B5CF6);
+  }
+  
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #F3F4F6 0%, #FFFFFF 100%);
+  }
+}
+
+@layer utilities {
+  /* Typography utilities for consistent styling */
+  .heading-primary {
+    @apply text-h1 text-text-primary font-bold leading-tight;
+  }
+  
+  .heading-secondary {
+    @apply text-h2 text-text-primary font-bold leading-tight;
+  }
+  
+  .heading-tertiary {
+    @apply text-h3 text-text-primary font-semibold leading-snug;
+  }
+  
+  .heading-quaternary {
+    @apply text-h4 text-text-primary font-semibold leading-snug;
+  }
+  
+  .body-large {
+    @apply text-body-lg text-text-primary font-regular leading-relaxed;
+  }
+  
+  .body-medium {
+    @apply text-body-md text-text-secondary font-regular leading-relaxed;
+  }
+  
+  .body-large-emphasis {
+    @apply text-body-lg-medium text-text-primary font-medium leading-relaxed;
+  }
+  
+  .body-medium-emphasis {
+    @apply text-body-md-medium text-text-primary font-medium leading-relaxed;
+  }
+}
